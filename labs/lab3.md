@@ -9,7 +9,7 @@
 5. Enter your RON username if prompted
 6. Enter your RON password when prompted
 7. You should see an 'open folder' on the left. Click it. The command prompt will have something like ```/home/unhAW/jtmiller/```. Click 'ok' open your home directory. If you saved a lab notebook to RON, you should see it on the left in a list of files. Click on it to open it. 
-8. Next, we need to clone your gen711-811 github repo that you forked. Skip this step if you have done this already 
+8. Next, we need to clone your gen711-811 github repo that you forked. Skip this step if you have done this already. If not, paste it into your lab notebook with <YOURGITHUBUSERNAME> replaced with your  username 
 ```
 cd $HOME
 git clone https://github.com/<YOURGITHUBUSERNAME>/gen711-811.git
