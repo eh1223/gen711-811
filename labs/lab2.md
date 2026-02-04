@@ -172,10 +172,13 @@ cat ~/.ssh/id_rsa.pub | ssh user@12.34.56.78 "mkdir -p ~/.ssh && cat >> ~/.ssh/a
 <br>
 <details><summary>For Windows</summary> 
 **For Windows**, run the following command in PowerShell to grant explicit read access to your username:
+
 ```
 icacls "privateKeyPath" /grant :R
 ```
+
 Then navigate to the private key file in Windows Explorer, right-click and select Properties. Select the Security tab → Advanced → Disable inheritance → Remove all inherited permissions from this object.
+
 </details> <!-- end for Windows-->
 
 Test the connection by connecting to RON
