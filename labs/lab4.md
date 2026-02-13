@@ -24,13 +24,22 @@ exercises: 15
 
 ### EXERCISE 1: NAVIGATION PRACTICE
 Navigate to your untrimmed_fastq directory in one command
+cd gen711-811/shell_data/untrimmed_fastq/
+can access using ls *untrimmed_fastq
 
 ### EXERCISE 2: WILDCARDS
 What would the output look like if the wildcard could *not* be matched? Compare the outputs
 
+expect an error
+ls: cannot access '*fq': No such file or directory
+
 ### EXERCISE 3: NAVIGATING PRACTICE
 Navigate to your home directory. From there, list the contents of the untrimmed_fastq directory.
 
+cd / cd $HOME / cd ~ = home directory
+SRR907977.fastq
+SRR098026.fastq
+headliners.txt
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -65,19 +74,38 @@ First navigate to the shell_data directory. There is a hidden directory within t
 
 Hint: hidden files and folders in Unix start with ., for example .my_hidden_directory
 
+ls -a / ls --all = finding hidden directories
+ls -Fa = all directories with a slash
+ls -laF = shows domain, users, last edited or accessed
+
 What is the hidden file name in the hidden directory?
+youfoundit.txt
 
 ### EXERCISE 5: HISTORY
 Find the line number in your history for the command that listed all the .sh files in /usr/bin. Rerun that command.
 
+427  ls /usr/bin/*.sh
+!# = rerun a specific code from history
+/# = line number
+
 ### EXERCISE 6: FILE CONTENTS
 Print out the contents of the ~/shell_data/untrimmed_fastq/SRR097977.fastq file. What is the last line of the file?
+cat = prints whole file to screen
 
 ### EXERCISE 7: PATHS
 From your home directory, and without changing directories, use one short command to print the contents of all of the files in the ~/shell_data/untrimmed_fastq directory.
 
 ### EXERCISE 8: LESS
 What are the next three nucleotides (characters) after the first instance of the sequence quoted above?
+
+CAC
+less FILE NAME or less -S FILE NAME
+use Shift+G to go to bottom and Q to exit
+also use grep 'TTTTT' *fastq = 'TTTTT' can be replaced by anything within file (ex.nucleotide sequence)
+head FASTQ to top
+tail FASTQ to bottom
+tail -n3 FASTQ gives last 3 lines
+
 
 ### File Permissions Help
 The first part of the output for the `-l` flag gives you information about the file's current permissions. There are ten slots in the
@@ -101,6 +129,13 @@ Create a backup of each of your FASTQ files using cp. (Note: You’ll need to do
 Use a wildcard to move all of your backup files to a new backup directory.
 Change the permissions on all of your backup files to be write-protected.
 
+mkdir = make directory
+cp = copy
+cp SRR098026.fastq SRR098026-backup.fastq = copy fastq file
+cp SRR098026.fastq /usr/SRR098026-backup.fastq = make copy from home directory
+mv = move
+mv *backup.fastq backup/ = move everything that ends in backup.fastq to backup folder
+
 
 ### EXERCISE 10: PROGRAMS
 After loading a conda environment, where is the program 'fastqc' stored?
@@ -113,3 +148,11 @@ After loading a conda environment, where is the program 'fastqc' stored?
 - The `history` command and the up arrow on your keyboard can be used to repeat recently used commands.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+if syncing issues, use git config pull.rebase false
+in git, discard commits before syncing
+
+use clear to "erase" all data in terminal
+
+echo = echoes everything back
+
