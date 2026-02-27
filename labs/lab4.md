@@ -30,16 +30,24 @@ can access using ls *untrimmed_fastq
 ### EXERCISE 2: WILDCARDS
 What would the output look like if the wildcard could *not* be matched? Compare the outputs
 
+<<<<<<< HEAD
 expect an error
 ls: cannot access '*fq': No such file or directory
+=======
+ls *fq
+>>>>>>> f74f7dffb5b2d91ade80925cc7551b8ae25f5b2a
 
 ### EXERCISE 3: NAVIGATING PRACTICE
 Navigate to your home directory. From there, list the contents of the untrimmed_fastq directory.
 
+<<<<<<< HEAD
 cd / cd $HOME / cd ~ = home directory
 SRR907977.fastq
 SRR098026.fastq
 headliners.txt
+=======
+ls 
+>>>>>>> f74f7dffb5b2d91ade80925cc7551b8ae25f5b2a
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -81,6 +89,8 @@ ls -laF = shows domain, users, last edited or accessed
 What is the hidden file name in the hidden directory?
 youfoundit.txt
 
+
+
 ### EXERCISE 5: HISTORY
 Find the line number in your history for the command that listed all the .sh files in /usr/bin. Rerun that command.
 
@@ -95,8 +105,9 @@ cat = prints whole file to screen
 ### EXERCISE 7: PATHS
 From your home directory, and without changing directories, use one short command to print the contents of all of the files in the ~/shell_data/untrimmed_fastq directory.
 
-### EXERCISE 8: LESS
+### EXERCISE 8: LESS (Sequence = TTTTTq)
 What are the next three nucleotides (characters) after the first instance of the sequence quoted above?
+<<<<<<< HEAD
 
 CAC
 less FILE NAME or less -S FILE NAME
@@ -156,3 +167,5 @@ use clear to "erase" all data in terminal
 
 echo = echoes everything back
 
+=======
+>>>>>>> f74f7dffb5b2d91ade80925cc7551b8ae25f5b2a
